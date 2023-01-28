@@ -1,0 +1,9 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://admin-server-url:8090
+
+
+server:
+  port: 8090

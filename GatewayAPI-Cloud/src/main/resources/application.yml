@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: welcome-api
+        uri: lb://WELCOME-API
+        predicates:
+        - Path=/welcome/**
+      - id: user-api
+        uri: lb://USER-API
+        predicates:
+        - Path=/user/**
+  application:
+    name: GATEWAYAPI-CLOUD
+
+server:
+  port: 3333

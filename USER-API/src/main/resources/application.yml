@@ -1,0 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    
+server:
+  port: 8080
+  
+
+spring:
+  application:
+    name: USER-API
+  boot:
+    admin:
+      client:
+        url: http://localhost:8090
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: '*'
